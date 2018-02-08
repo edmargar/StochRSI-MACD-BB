@@ -1,0 +1,25 @@
+Bolinger Bands
+(*
+1- o arquivo que postei é BB.js e deve ser colocado em estratégias / indicadores 
+2- adicione seu novo indicador em plugins / baseTradingMethod.js, há uma lista chamada Indicatorslá. Então, apenas adicione
+
+    BB: {
+        factory: require(indicatorsPath + 'BB'),
+        input: 'price'
+    }
+3- agora para o arquivo de estratégia (criar em strategies/): 
+esta etapa é sobre documentos do gekko
+
+at method.init:
+    this.addIndicator('bb', 'BB', this.settings.bbands);
+at method.check:
+   var BB = this.indicators.bb;
+   //BB.lower; BB.upper; BB.middle are your line values
+4 configurações:
+
+bb requires:
+ bbands: {TimePeriod: 20,
+                NbDevDn: 2,
+                NbDevUp: 2 
+}
+Adicione esta entrada "faixas" com seus filhos às suas configurações e é isso.
