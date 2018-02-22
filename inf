@@ -1,0 +1,24 @@
+Indicador Supertrend para Gekko trading bot .
+
+Uma explicação útil de como calcular Supertrend pode ser encontrada aqui .
+
+Nota importante: Este software não é uma garantia, você ganhará lucros na negociação de Bitcoins, Altcoins ou qualquer outra coisa. Isso é um ajudante na observação dos mercados. Escolha ele com sabedoria. Este software nem eu somos responsáveis ​​se você perder dinheiro em ativos de negociação! Use por sua conta e risco.
+
+Como usar
+Configuração do gekko
+Configure o Gekko como descrito aqui .
+
+Módulos de nó necessários
+Instale talib com o seguinte comando no diretório gekko.
+
+npm install talib
+
+Use esta estratégia
+Copie Supertrend.jspara gekko / estratégias .
+Copie Supertrend.tomlpara gekko / config / strategies .
+Adicione o seguinte código à CONFIGURING TRADING ADVICEseção dentro config.js.
+Configure config.tradingAdvisorcomo quiser.
+config.Supertrend = { atrEma: 7, bandFactor: 3, }
+
+Use esse método por sua conta e risco. Especialmente se você vai deixar Gekko fazer os negócios para você! Não sou responsável por qualquer perda que você ganhe.
+Este README.md foi escrito seguindo este .
